@@ -32,4 +32,12 @@ class TopPostsService: GeneralService {
             errorHandler(error)
         }
     }
+
+    func fetchPostImage(url: String, responseHandler: @escaping (_ response: Data) -> Void, errorHandler: @escaping (_ error: Error?) -> Void) {
+        self.executeRequest(url: url, paramaters: nil, responseHandler: { (data) in
+            responseHandler(data)
+        }) { (error) in
+            errorHandler(error)
+        }
+    }
 }

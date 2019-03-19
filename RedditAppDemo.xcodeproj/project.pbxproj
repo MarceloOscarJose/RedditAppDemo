@@ -23,6 +23,10 @@
 		9CB06FED22410736001B97E9 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FEC22410736001B97E9 /* PostResult.swift */; };
 		9CB06FF022411191001B97E9 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FEE22411191001B97E9 /* MasterTableViewCell.swift */; };
 		9CB06FF122411191001B97E9 /* MasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB06FEF22411191001B97E9 /* MasterTableViewCell.xib */; };
+		9CB06FF3224116D2001B97E9 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FF2224116D2001B97E9 /* PostsModel.swift */; };
+		9CB06FF522411751001B97E9 /* PostDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FF422411751001B97E9 /* PostDataModel.swift */; };
+		9CB06FF8224117CC001B97E9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FF7224117CC001B97E9 /* Date.swift */; };
+		9CB06FFA22411875001B97E9 /* MasterViewController+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FF922411875001B97E9 /* MasterViewController+TableDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		9CB06FEC22410736001B97E9 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
 		9CB06FEE22411191001B97E9 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 		9CB06FEF22411191001B97E9 /* MasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterTableViewCell.xib; sourceTree = "<group>"; };
+		9CB06FF2224116D2001B97E9 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
+		9CB06FF422411751001B97E9 /* PostDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataModel.swift; sourceTree = "<group>"; };
+		9CB06FF7224117CC001B97E9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		9CB06FF922411875001B97E9 /* MasterViewController+TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasterViewController+TableDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 		9CB06FD82240F900001B97E9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9CB06FF6224117B4001B97E9 /* Extension */,
 				9CB06FDD2240FA3A001B97E9 /* Service */,
 				9CB06FA62240F7F7001B97E9 /* AppDelegate.swift */,
 				9CB06FE722410691001B97E9 /* ConfigManager.swift */,
@@ -195,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				9CB06FA82240F7F7001B97E9 /* MasterViewController.swift */,
+				9CB06FF922411875001B97E9 /* MasterViewController+TableDelegate.swift */,
 				9CB06FE12240FB88001B97E9 /* DetailViewController.swift */,
 			);
 			path = Controller;
@@ -203,6 +213,8 @@
 		9CB06FDF2240FA51001B97E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9CB06FF2224116D2001B97E9 /* PostsModel.swift */,
+				9CB06FF422411751001B97E9 /* PostDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +234,14 @@
 				9CB06FEC22410736001B97E9 /* PostResult.swift */,
 			);
 			path = Codeable;
+			sourceTree = "<group>";
+		};
+		9CB06FF6224117B4001B97E9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9CB06FF7224117CC001B97E9 /* Date.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,13 +379,17 @@
 			files = (
 				9CB06FED22410736001B97E9 /* PostResult.swift in Sources */,
 				9CB06FAF2240F7F7001B97E9 /* RedditAppDemo.xcdatamodeld in Sources */,
+				9CB06FFA22411875001B97E9 /* MasterViewController+TableDelegate.swift in Sources */,
 				9CB06FA92240F7F7001B97E9 /* MasterViewController.swift in Sources */,
+				9CB06FF3224116D2001B97E9 /* PostsModel.swift in Sources */,
 				9CB06FA72240F7F7001B97E9 /* AppDelegate.swift in Sources */,
 				9CB06FF022411191001B97E9 /* MasterTableViewCell.swift in Sources */,
 				9CB06FE4224105E0001B97E9 /* GeneralService.swift in Sources */,
+				9CB06FF8224117CC001B97E9 /* Date.swift in Sources */,
 				9CB06FE22240FB88001B97E9 /* DetailViewController.swift in Sources */,
 				9CB06FE822410691001B97E9 /* ConfigManager.swift in Sources */,
 				9CB06FE622410659001B97E9 /* TopPostsService.swift in Sources */,
+				9CB06FF522411751001B97E9 /* PostDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

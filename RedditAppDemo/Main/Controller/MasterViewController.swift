@@ -13,11 +13,13 @@ class MasterViewController: UITableViewController {
     weak var delegate: PostSelectionDelegate?
 
     // Data vars
+    let postsModel = PostsModel()
     let cellIdentifier = "MasterTableViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupControls()
+        getTopPost(nextPage: false)
     }
 
     func setupControls() {
@@ -26,6 +28,16 @@ class MasterViewController: UITableViewController {
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
+    }
+
+    func getTopPost(nextPage: Bool = false) {
+        postsModel.getTopPosts(nextPage: nextPage, responseHandler: {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }) { (error) in
+            print("Connection error")
+        }
     }
 }
 

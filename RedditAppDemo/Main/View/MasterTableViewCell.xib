@@ -31,7 +31,7 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXZ-V3-J9h">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXZ-V3-J9h">
                         <rect key="frame" x="108" y="35" width="358" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="KqL-Ad-e4Z"/>
@@ -48,7 +48,8 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw5-My-UJZ">
-                        <rect key="frame" x="20" y="118.5" width="254" height="150"/>
+                        <rect key="frame" x="20" y="118.5" width="238" height="150"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title="Dismiss post" image="desmiss">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
@@ -74,6 +75,7 @@
                     <constraint firstItem="8NZ-du-QLM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="JFa-1n-88T"/>
                     <constraint firstItem="rM5-Vj-AVj" firstAttribute="leading" secondItem="8NZ-du-QLM" secondAttribute="trailing" constant="16" id="KK7-0c-5Di"/>
                     <constraint firstItem="qhK-bn-9ti" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Kl2-Zq-2Hm"/>
+                    <constraint firstItem="qhK-bn-9ti" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zcT-Ci-gWX" secondAttribute="bottom" constant="16" id="LRG-rH-Dfa"/>
                     <constraint firstItem="zcT-Ci-gWX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="OH1-QN-gXF"/>
                     <constraint firstItem="kXZ-V3-J9h" firstAttribute="leading" secondItem="zcT-Ci-gWX" secondAttribute="trailing" constant="8" id="Ohx-Xj-Vx6"/>
                     <constraint firstItem="uvu-e6-85v" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="UaW-39-QNp"/>
@@ -84,12 +86,19 @@
                     <constraint firstItem="kXZ-V3-J9h" firstAttribute="top" secondItem="zcT-Ci-gWX" secondAttribute="top" id="hzb-Ju-toc"/>
                     <constraint firstItem="zcT-Ci-gWX" firstAttribute="top" secondItem="8NZ-du-QLM" secondAttribute="bottom" constant="8" id="i2G-fL-q36"/>
                     <constraint firstAttribute="bottomMargin" secondItem="qhK-bn-9ti" secondAttribute="bottom" constant="10" id="jQO-yn-UxA"/>
-                    <constraint firstItem="qhK-bn-9ti" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zcT-Ci-gWX" secondAttribute="bottom" constant="16" id="rnL-IS-UVp"/>
                     <constraint firstItem="yw5-My-UJZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="xHg-DE-ktS"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="8NZ-du-QLM" id="tqh-Ap-x4x"/>
+                <outlet property="commentsLabel" destination="qhK-bn-9ti" id="8KO-nm-uwh"/>
+                <outlet property="createdLabel" destination="rM5-Vj-AVj" id="Eia-ge-uyH"/>
+                <outlet property="postThumbnail" destination="zcT-Ci-gWX" id="Q9e-iV-4ds"/>
+                <outlet property="readedIndicator" destination="uvu-e6-85v" id="KSy-c0-FzP"/>
+                <outlet property="titleLabel" destination="kXZ-V3-J9h" id="Tat-wm-UvX"/>
+            </connections>
             <point key="canvasLocation" x="193.59999999999999" y="202.84857571214394"/>
         </tableViewCell>
     </objects>
