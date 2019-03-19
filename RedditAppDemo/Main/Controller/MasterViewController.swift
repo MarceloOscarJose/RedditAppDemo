@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, MasterTableViewCellDelegate {
 
     weak var delegate: PostSelectionDelegate?
 
@@ -37,6 +37,15 @@ class MasterViewController: UITableViewController {
             }
         }) { (error) in
             print("Connection error")
+        }
+    }
+
+    func dismissPost(postIndex: IndexPath) {
+        self.postsModel.removePost(index: postIndex.item)
+
+        DispatchQueue.main.async {
+            self.tableView.deleteRows(at: [postIndex], with: .middle)
+            self.tableView.reloadData()
         }
     }
 }

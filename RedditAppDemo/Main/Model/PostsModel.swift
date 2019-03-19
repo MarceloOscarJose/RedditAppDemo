@@ -46,4 +46,16 @@ class PostsModel: NSObject {
             errorHandler(error)
         }
     }
+
+    func setReadedPost(index: Int) {
+        self.posts[index].readed = true
+    }
+
+    func removePost(index: Int) {
+        self.posts.remove(at: index)
+    }
+
+    func removeAllPosts() {
+        self.posts.removeAll()
+    }
 }
