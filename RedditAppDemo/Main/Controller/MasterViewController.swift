@@ -12,6 +12,9 @@ class MasterViewController: UITableViewController {
 
     weak var delegate: PostSelectionDelegate?
 
+    // Data vars
+    let cellIdentifier = "MasterTableViewCell"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupControls()
@@ -19,12 +22,10 @@ class MasterViewController: UITableViewController {
 
     func setupControls() {
         splitViewController?.delegate = self
-        let service = TopPostsService()
-        service.fetchTopPosts(afterPost: nil, responseHandler: { (result) in
-            print(result)
-        }) { (error) in
-            print(error)
-        }
+        tableView.register(UINib(nibName: cellIdentifier, bundle: .main), forCellReuseIdentifier: cellIdentifier)
+        tableView.delegate = self
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
     }
 }
 

@@ -21,6 +21,8 @@
 		9CB06FE822410691001B97E9 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FE722410691001B97E9 /* ConfigManager.swift */; };
 		9CB06FEA224106C7001B97E9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CB06FE9224106C7001B97E9 /* Config.plist */; };
 		9CB06FED22410736001B97E9 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FEC22410736001B97E9 /* PostResult.swift */; };
+		9CB06FF022411191001B97E9 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FEE22411191001B97E9 /* MasterTableViewCell.swift */; };
+		9CB06FF122411191001B97E9 /* MasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB06FEF22411191001B97E9 /* MasterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		9CB06FE722410691001B97E9 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
 		9CB06FE9224106C7001B97E9 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		9CB06FEC22410736001B97E9 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
+		9CB06FEE22411191001B97E9 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
+		9CB06FEF22411191001B97E9 /* MasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 		9CB06FE02240FA5A001B97E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CB06FEE22411191001B97E9 /* MasterTableViewCell.swift */,
+				9CB06FEF22411191001B97E9 /* MasterTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				9CB06FDB2240F98E001B97E9 /* Main.storyboard in Resources */,
 				9CB06FB42240F7F7001B97E9 /* LaunchScreen.storyboard in Resources */,
 				9CB06FB12240F7F7001B97E9 /* Assets.xcassets in Resources */,
+				9CB06FF122411191001B97E9 /* MasterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +361,7 @@
 				9CB06FAF2240F7F7001B97E9 /* RedditAppDemo.xcdatamodeld in Sources */,
 				9CB06FA92240F7F7001B97E9 /* MasterViewController.swift in Sources */,
 				9CB06FA72240F7F7001B97E9 /* AppDelegate.swift in Sources */,
+				9CB06FF022411191001B97E9 /* MasterTableViewCell.swift in Sources */,
 				9CB06FE4224105E0001B97E9 /* GeneralService.swift in Sources */,
 				9CB06FE22240FB88001B97E9 /* DetailViewController.swift in Sources */,
 				9CB06FE822410691001B97E9 /* ConfigManager.swift in Sources */,
