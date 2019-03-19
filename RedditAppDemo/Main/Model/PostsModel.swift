@@ -35,6 +35,10 @@ class PostsModel: NSObject {
                   thumbnail: post.data.thumbnail
                 )
 
+                if let preview = post.data.preview, let previewImages = preview.images, let previewSource = previewImages[0].source {
+                    dataModel.setPreviewImage(preview: previewSource.url)
+                }
+
                 self.posts.append(dataModel)
             }
             responseHandler()

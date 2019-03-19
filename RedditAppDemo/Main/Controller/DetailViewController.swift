@@ -19,13 +19,29 @@ class DetailViewController: UIViewController, PostSelectionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupControls()
+    }
+
+    func setupControls() {
+        postImage.image = nil
     }
 
     func postSelected(postData: PostDataModel) {
+
+        if self.postData != nil {
+            self.postData.cancelFetch()
+        }
+
         postImage.image = UIImage(named: "noimage")
         self.postData = postData
 
         authorLabel.text = self.postData.author
         titleLabel.text = self.postData.title
+
+        self.postData.fetchPreview { (image) in
+            DispatchQueue.main.async {
+                self.postImage.image = image
+            }
+        }
     }
 }

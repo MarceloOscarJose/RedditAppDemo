@@ -9,6 +9,7 @@
 import UIKit
 
 class PostDataModel: NSObject {
+
     let topPostsService = TopPostsService()
 
     var id: String
@@ -32,8 +33,18 @@ class PostDataModel: NSObject {
         self.preview = ""
     }
 
+    func setPreviewImage(preview: String) {
+        self.preview = preview.replacingOccurrences(of: "amp;", with: "")
+    }
+
     func fetchThumbnail(responseHandler: @escaping (_ response: UIImage?) -> Void) {
         fetchImage(url: self.thumbnail) { (image) in
+            responseHandler(image)
+        }
+    }
+
+    func fetchPreview(responseHandler: @escaping (_ response: UIImage?) -> Void) {
+        fetchImage(url: self.preview) { (image) in
             responseHandler(image)
         }
     }
