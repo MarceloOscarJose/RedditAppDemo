@@ -166,4 +166,4 @@ xcuserdata
 # Merge exclude merge files
 *.orig
 
-RedditAppDemo.xcodeproj/xcuserdata/
+RedditAppDemo.xcodeproj/xcuserdata/*
