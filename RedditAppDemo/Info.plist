@@ -41,6 +41,8 @@
             </dict>
         </dict>
     </dict>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Access to your gallery</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

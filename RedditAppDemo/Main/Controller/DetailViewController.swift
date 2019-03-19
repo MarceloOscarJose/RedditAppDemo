@@ -14,7 +14,6 @@ class DetailViewController: UIViewController, PostSelectionDelegate {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
 
-    // Data vars
     var postData: PostDataModel!
 
     override func viewDidLoad() {
@@ -23,6 +22,9 @@ class DetailViewController: UIViewController, PostSelectionDelegate {
     }
 
     func setupControls() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentSaveImage))
+        postImage.isUserInteractionEnabled = true
+        postImage.addGestureRecognizer(tapGesture)
         postImage.image = nil
     }
 
@@ -43,5 +45,26 @@ class DetailViewController: UIViewController, PostSelectionDelegate {
                 self.postImage.image = image
             }
         }
+    }
+
+    @objc func presentSaveImage() {
+        if let image = postImage.image, image != UIImage(named: "noimage") {
+            UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveImage(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
+    }
+
+    @objc func saveImage(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+
+        if let error = error {
+            alert.title = "Save error"
+            alert.message = error.localizedDescription
+        } else {
+            alert.title = "Saved"
+            alert.message = "The image has been saved to your photos"
+        }
+
+        present(alert, animated: true)
     }
 }

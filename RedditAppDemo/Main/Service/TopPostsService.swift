@@ -11,7 +11,7 @@ import Foundation
 class TopPostsService: GeneralService {
 
     let urlPath: String = "/top/.json"
-    let pageLimit: Int = 10
+    let pageLimit: Int = 50
 
     func fetchTopPosts(afterPost: String?, responseHandler: @escaping (_ response: PostResult) -> Void, errorHandler: @escaping (_ error: Error?) -> Void) {
         let url = "\(ConfigManager.sharedInstance.apiURL)\(urlPath)"
