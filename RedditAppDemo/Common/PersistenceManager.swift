@@ -47,5 +47,18 @@ class PersistenceManager: NSObject {
             return [T]()
         }
     }
+
+    func fetchById<T: NSManagedObject>(_ objectType: T.Type, id: String) -> [T] {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: objectType))
+        fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+
+        do {
+            let fetchedObjects = try persistentContainer.viewContext.fetch(fetchRequest) as? [T]
+            return fetchedObjects ?? [T]()
+        } catch {
+            print(error)
+            return [T]()
+        }
+    }
 }
 
