@@ -28,6 +28,7 @@
 		9CB06FF8224117CC001B97E9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FF7224117CC001B97E9 /* Date.swift */; };
 		9CB06FFA22411875001B97E9 /* MasterViewController+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FF922411875001B97E9 /* MasterViewController+TableDelegate.swift */; };
 		9CB06FFC224124C6001B97E9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FFB224124C6001B97E9 /* UIColor.swift */; };
+		9CB06FFE2241318E001B97E9 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FFD2241318E001B97E9 /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		9CB06FF7224117CC001B97E9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		9CB06FF922411875001B97E9 /* MasterViewController+TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasterViewController+TableDelegate.swift"; sourceTree = "<group>"; };
 		9CB06FFB224124C6001B97E9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9CB06FFD2241318E001B97E9 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				9CB06FDD2240FA3A001B97E9 /* Service */,
 				9CB06FA62240F7F7001B97E9 /* AppDelegate.swift */,
 				9CB06FE722410691001B97E9 /* ConfigManager.swift */,
+				9CB06FFD2241318E001B97E9 /* PersistenceManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				9CB06FFA22411875001B97E9 /* MasterViewController+TableDelegate.swift in Sources */,
 				9CB06FA92240F7F7001B97E9 /* MasterViewController.swift in Sources */,
 				9CB06FF3224116D2001B97E9 /* PostsModel.swift in Sources */,
+				9CB06FFE2241318E001B97E9 /* PersistenceManager.swift in Sources */,
 				9CB06FA72240F7F7001B97E9 /* AppDelegate.swift in Sources */,
 				9CB06FF022411191001B97E9 /* MasterTableViewCell.swift in Sources */,
 				9CB06FE4224105E0001B97E9 /* GeneralService.swift in Sources */,
