@@ -132,7 +132,6 @@
 				9CB06FD72240F8F7001B97E9 /* Main */,
 				9CB06FB22240F7F7001B97E9 /* LaunchScreen.storyboard */,
 				9CB06FB52240F7F7001B97E9 /* Info.plist */,
-				9CB06FAD2240F7F7001B97E9 /* RedditAppDemo.xcdatamodeld */,
 			);
 			path = RedditAppDemo;
 			sourceTree = "<group>";
@@ -170,6 +169,7 @@
 		9CB06FD82240F900001B97E9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9CB06FFF2241322C001B97E9 /* Model */,
 				9CB06FF6224117B4001B97E9 /* Extension */,
 				9CB06FDD2240FA3A001B97E9 /* Service */,
 				9CB06FA62240F7F7001B97E9 /* AppDelegate.swift */,
@@ -248,6 +248,14 @@
 				9CB06FFB224124C6001B97E9 /* UIColor.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9CB06FFF2241322C001B97E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CB06FAD2240F7F7001B97E9 /* RedditAppDemo.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
