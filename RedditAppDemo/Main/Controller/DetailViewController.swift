@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DetailViewController.swift
 //  RedditAppDemo
 //
 //  Created by Marcelo José on 19/03/2019.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailViewController: UIViewController, PostSelectionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
-
