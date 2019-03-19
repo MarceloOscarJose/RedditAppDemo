@@ -166,5 +166,4 @@ xcuserdata
 # Merge exclude merge files
 *.orig
 
-RedditAppDemo.xcworkspace/xcshareddata/
 RedditAppDemo.xcodeproj/xcuserdata/
