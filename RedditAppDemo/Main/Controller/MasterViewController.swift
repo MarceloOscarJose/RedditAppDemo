@@ -16,6 +16,20 @@ class MasterViewController: UITableViewController, MasterTableViewCellDelegate {
     let postsModel = PostsModel()
     let cellIdentifier = "MasterTableViewCell"
 
+    lazy var tableRefreshControl: UIRefreshControl = {
+        let tableRefreshControl = UIRefreshControl()
+        tableRefreshControl.tintColor = UIColor.ligthBlue
+        tableRefreshControl.addTarget(self, action: #selector(getTopPost), for: .valueChanged)
+        return tableRefreshControl
+    }()
+    lazy var tableButtonRefreshControl: UIActivityIndicatorView = {
+        let tableButtonRefreshControl = UIActivityIndicatorView(style: .gray)
+        tableButtonRefreshControl.color = UIColor.ligthBlue
+        tableButtonRefreshControl.hidesWhenStopped = true
+        tableButtonRefreshControl.frame = CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 100)
+        return tableButtonRefreshControl
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupControls()
@@ -28,15 +42,27 @@ class MasterViewController: UITableViewController, MasterTableViewCellDelegate {
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.refreshControl = tableRefreshControl
+        tableView.tableFooterView = tableButtonRefreshControl
     }
 
-    func getTopPost(nextPage: Bool = false) {
+    @objc func getTopPost(nextPage: Bool = false) {
+        self.tableButtonRefreshControl.startAnimating()
+
         postsModel.getTopPosts(nextPage: nextPage, responseHandler: {
             DispatchQueue.main.async {
+                self.tableRefreshControl.endRefreshing()
                 self.tableView.reloadData()
+                self.tableButtonRefreshControl.stopAnimating()
             }
         }) { (error) in
             print("Connection error")
+        }
+    }
+
+    func shouldUpdatePosts(indexPath: IndexPath) {
+        if indexPath.row == postsModel.posts.count - 1 {
+            self.getTopPost(nextPage: true)
         }
     }
 

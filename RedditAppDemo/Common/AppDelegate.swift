@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let masterViewController = leftNavController.topViewController as? MasterViewController,
             let detailViewController = splitViewController.viewControllers.last as? DetailViewController
             else { fatalError() }
-        
+
+        splitViewController.preferredDisplayMode = .allVisible
         masterViewController.delegate = detailViewController
         return true
     }

@@ -16,16 +16,22 @@ extension MasterViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MasterTableViewCell
-        let postData = postsModel.posts[indexPath.item]
 
-        if cell.postThumbnail.image == nil {
-            postData.fetchThumbnail { (image) in
-                cell.updateThumbnail(thumbnail: image)
+        if postsModel.posts.count > indexPath.item {
+
+            let postData = postsModel.posts[indexPath.item]
+
+            if cell.postThumbnail.image == nil {
+                postData.fetchThumbnail { (image) in
+                    cell.updateThumbnail(thumbnail: image)
+                }
             }
+
+            cell.updateCell(postIndex: indexPath, author: postData.author, created: postData.created, title: postData.title, comments: postData.comments, readed: postData.readed)
+            shouldUpdatePosts(indexPath: indexPath)
+            cell.delegate = self
         }
 
-        cell.updateCell(postIndex: indexPath, author: postData.author, created: postData.created, title: postData.title, comments: postData.comments, readed: postData.readed)
-        cell.delegate = self
         return cell
     }
 
