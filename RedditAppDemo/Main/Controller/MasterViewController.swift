@@ -19,6 +19,12 @@ class MasterViewController: UITableViewController {
 
     func setupControls() {
         splitViewController?.delegate = self
+        let service = TopPostsService()
+        service.fetchTopPosts(afterPost: nil, responseHandler: { (result) in
+            print(result)
+        }) { (error) in
+            print(error)
+        }
     }
 }
 

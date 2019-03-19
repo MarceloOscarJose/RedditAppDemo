@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Config.plist
+   RedditAppDemo
+
+   Created by Marcelo José on 19/03/2019.
+   Copyright (c) 2019 Marcelo José. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>ApiURL</key>
+        <string>https://www.reddit.com/</string>
+    </dict>
+</plist>

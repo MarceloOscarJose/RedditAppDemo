@@ -17,6 +17,10 @@
 		9CB06FDB2240F98E001B97E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB06FDA2240F98E001B97E9 /* Main.storyboard */; };
 		9CB06FE22240FB88001B97E9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FE12240FB88001B97E9 /* DetailViewController.swift */; };
 		9CB06FE4224105E0001B97E9 /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FE3224105E0001B97E9 /* GeneralService.swift */; };
+		9CB06FE622410659001B97E9 /* TopPostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FE522410659001B97E9 /* TopPostsService.swift */; };
+		9CB06FE822410691001B97E9 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FE722410691001B97E9 /* ConfigManager.swift */; };
+		9CB06FEA224106C7001B97E9 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CB06FE9224106C7001B97E9 /* Config.plist */; };
+		9CB06FED22410736001B97E9 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FEC22410736001B97E9 /* PostResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		9CB06FDA2240F98E001B97E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9CB06FE12240FB88001B97E9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9CB06FE3224105E0001B97E9 /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
+		9CB06FE522410659001B97E9 /* TopPostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPostsService.swift; sourceTree = "<group>"; };
+		9CB06FE722410691001B97E9 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		9CB06FE9224106C7001B97E9 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		9CB06FEC22410736001B97E9 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 			children = (
 				9CB06FDD2240FA3A001B97E9 /* Service */,
 				9CB06FA62240F7F7001B97E9 /* AppDelegate.swift */,
+				9CB06FE722410691001B97E9 /* ConfigManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				9CB06FB02240F7F7001B97E9 /* Assets.xcassets */,
+				9CB06FE9224106C7001B97E9 /* Config.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -163,6 +173,8 @@
 		9CB06FDC2240F9D8001B97E9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				9CB06FEB22410718001B97E9 /* Codeable */,
+				9CB06FE522410659001B97E9 /* TopPostsService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -196,6 +208,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9CB06FEB22410718001B97E9 /* Codeable */ = {
+			isa = PBXGroup;
+			children = (
+				9CB06FEC22410736001B97E9 /* PostResult.swift */,
+			);
+			path = Codeable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB06FEA224106C7001B97E9 /* Config.plist in Resources */,
 				9CB06FDB2240F98E001B97E9 /* Main.storyboard in Resources */,
 				9CB06FB42240F7F7001B97E9 /* LaunchScreen.storyboard in Resources */,
 				9CB06FB12240F7F7001B97E9 /* Assets.xcassets in Resources */,
@@ -329,11 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB06FED22410736001B97E9 /* PostResult.swift in Sources */,
 				9CB06FAF2240F7F7001B97E9 /* RedditAppDemo.xcdatamodeld in Sources */,
 				9CB06FA92240F7F7001B97E9 /* MasterViewController.swift in Sources */,
 				9CB06FA72240F7F7001B97E9 /* AppDelegate.swift in Sources */,
 				9CB06FE4224105E0001B97E9 /* GeneralService.swift in Sources */,
 				9CB06FE22240FB88001B97E9 /* DetailViewController.swift in Sources */,
+				9CB06FE822410691001B97E9 /* ConfigManager.swift in Sources */,
+				9CB06FE622410659001B97E9 /* TopPostsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
