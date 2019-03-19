@@ -27,4 +27,18 @@ extension MasterViewController {
         cell.updateCell(postIndex: indexPath, author: postData.author, created: postData.created, title: postData.title, comments: postData.comments, readed: postData.readed)
         return cell
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        if let detailViewController = delegate as? DetailViewController {
+            let postData = postsModel.posts[indexPath.item]
+
+            let cell = tableView.cellForRow(at: indexPath) as! MasterTableViewCell
+
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+
+            splitViewController?.showDetailViewController(detailViewController, sender: nil)
+            detailViewController.postSelected(postData: postData)
+        }
+    }
 }
