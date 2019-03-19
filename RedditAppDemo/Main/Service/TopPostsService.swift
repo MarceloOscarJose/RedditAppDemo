@@ -13,9 +13,13 @@ class TopPostsService: GeneralService {
     let urlPath: String = "/top/.json"
     let pageLimit: Int = 10
 
-    func fetchTopPosts(responseHandler: @escaping (_ response: PostResult) -> Void, errorHandler: @escaping (_ error: Error?) -> Void) {
+    func fetchTopPosts(afterPost: String?, responseHandler: @escaping (_ response: PostResult) -> Void, errorHandler: @escaping (_ error: Error?) -> Void) {
         let url = "\(ConfigManager.sharedInstance.apiURL)\(urlPath)"
-        let params: [String: String] = ["limit": "\(pageLimit)"]
+        var params: [String: String] = ["limit": "\(pageLimit)"]
+
+        if let after = afterPost {
+            params.updateValue(after, forKey: "after")
+        }
 
         self.executeRequest(url: url, paramaters: params, responseHandler: { (data) in
             do {
