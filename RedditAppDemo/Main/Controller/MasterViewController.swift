@@ -48,6 +48,15 @@ class MasterViewController: UITableViewController, MasterTableViewCellDelegate {
             self.tableView.reloadData()
         }
     }
+
+    @IBAction func dismissAll(_ sender: Any) {
+        self.postsModel.removeAllPosts()
+
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.getTopPost(nextPage: true)
+        }
+    }
 }
 
 extension MasterViewController: UISplitViewControllerDelegate {

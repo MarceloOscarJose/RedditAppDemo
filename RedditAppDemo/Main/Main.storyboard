@@ -73,7 +73,13 @@
                             <outlet property="delegate" destination="x7Z-nI-Vdu" id="jRB-Sb-3cA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reddit Posts" id="eKx-Ug-iFD"/>
+                    <navigationItem key="navigationItem" title="Reddit Posts" id="eKx-Ug-iFD">
+                        <barButtonItem key="rightBarButtonItem" title="Dismiss all" id="nZF-3K-qLn">
+                            <connections>
+                                <action selector="dismissAll:" destination="x7Z-nI-Vdu" id="gyw-zF-yGu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8m-iz-5AA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
