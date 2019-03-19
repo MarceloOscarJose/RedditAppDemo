@@ -16,6 +16,7 @@
 		9CB06FCA2240F7F7001B97E9 /* RedditAppDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FC92240F7F7001B97E9 /* RedditAppDemoUITests.swift */; };
 		9CB06FDB2240F98E001B97E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB06FDA2240F98E001B97E9 /* Main.storyboard */; };
 		9CB06FE22240FB88001B97E9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FE12240FB88001B97E9 /* DetailViewController.swift */; };
+		9CB06FE4224105E0001B97E9 /* GeneralService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB06FE3224105E0001B97E9 /* GeneralService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9CB06FCB2240F7F7001B97E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB06FDA2240F98E001B97E9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9CB06FE12240FB88001B97E9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9CB06FE3224105E0001B97E9 /* GeneralService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		9CB06FDD2240FA3A001B97E9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				9CB06FE3224105E0001B97E9 /* GeneralService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				9CB06FAF2240F7F7001B97E9 /* RedditAppDemo.xcdatamodeld in Sources */,
 				9CB06FA92240F7F7001B97E9 /* MasterViewController.swift in Sources */,
 				9CB06FA72240F7F7001B97E9 /* AppDelegate.swift in Sources */,
+				9CB06FE4224105E0001B97E9 /* GeneralService.swift in Sources */,
 				9CB06FE22240FB88001B97E9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
